@@ -57,6 +57,7 @@ export function SkillsSection() {
                 cardDimensions={{ width: 150, height: 150 }}
                 cardsData={images}
               />
+              
             </div>
           </div>
         </FadeIn>
