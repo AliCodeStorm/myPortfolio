@@ -13,6 +13,7 @@ import { HtmlLogo } from "../icons/html-logo";
 import { CssLogo } from "../icons/css-logo";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Stack from "../Animations/Stack";
 
 const skills = [
   { name: 'React.js', icon: <ReactLogo className="h-full w-full" />, level: 95 },
@@ -26,18 +27,40 @@ const skills = [
 
 export function SkillsSection() {
   const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: true });
+  const images = [
+    { id: 1, img: "/logos/github.png" },
+    { id: 2, img: "/logos/react.png" },
+    { id: 3, img: "/logos/mongodb.jpg" },
+    { id: 4, img: "/logos/nodejs.png" }
+  ];
 
   return (
     <section id="skills" ref={ref} className="py-20 bg-gradient-to-r from-muted/20 to-background">
       <div className="container mx-auto px-4">
-        <FadeIn direction="up" className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            My Skills
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A look at the technologies and tools I use to bring ideas to life.
-          </p>
+        <FadeIn direction="up" className="mb-16">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8">
+            {/* Text Block */}
+            <div className="text-center lg:text-center max-w-2xl h-full flex flex-col justify-center">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                My Skills
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                A look at the technologies and tools I use to bring ideas to life.
+              </p>
+            </div>
+
+            {/* Stack Block */}
+            <div className="w-[150px] h-[150px] flex-shrink-0">
+              <Stack
+                randomRotation={true}
+                sensitivity={50}
+                cardDimensions={{ width: 150, height: 150 }}
+                cardsData={images}
+              />
+            </div>
+          </div>
         </FadeIn>
+
 
         <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {skills.map((skill, index) => (
@@ -45,7 +68,7 @@ export function SkillsSection() {
               <HoverCard hoverScale={1.05} rotateOnHover className="group">
                 <Card className="h-full bg-gradient-to-br from-background to-muted/30 border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-xl">
                   <CardContent className="flex flex-col items-center justify-center p-6 text-center">
-                    <motion.div 
+                    <motion.div
                       className="h-16 w-16 mb-4 text-primary group-hover:text-accent transition-colors"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}

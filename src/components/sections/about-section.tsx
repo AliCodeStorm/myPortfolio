@@ -41,7 +41,6 @@ export function AboutSection() {
                 </h2>
               </FadeIn>
             </StaggerItem>
-
             <StaggerItem>
               <FadeIn direction="right" delay={0.2}>
                 <div className="space-y-4 text-lg text-muted-foreground">

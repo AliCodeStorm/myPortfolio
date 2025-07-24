@@ -16,6 +16,7 @@ import {
   SheetTrigger,
 } from "../ui/sheet";
 import { ProgressBar } from '../ui/magic-ui/progress-bar';
+import { SparklesText } from '../ui/magic-ui/sparkles-text';
 
 const navLinks = [
   { href: '#home', label: 'Home' },
@@ -51,14 +52,14 @@ export function AnimatedHeader() {
   return (
     <motion.header
       className={`fixed z-30 top-0 w-full transition-all duration-300 ${scrolled
-          ? 'bg-background/80 backdrop-blur-md border-b border-primary/10 shadow-lg'
-          : 'bg-transparent'
+        ? 'bg-background/80 backdrop-blur-md border-b border-primary/10 shadow-lg'
+        : 'bg-transparent'
         }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      
+
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4">
         <HoverCard hoverScale={1.05}>
           <Link href="#home" className="flex items-center space-x-2" onClick={() => handleNavClick('#home')}>
@@ -68,9 +69,11 @@ export function AnimatedHeader() {
             >
               <Code2 className="h-8 w-8 text-primary" />
             </motion.div>
-            <span className="font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              AliRaza
-            </span>
+            <SparklesText className='mb-6' sparklesCount={6}>
+              <span className="font-bold text-xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                AliRaza
+              </span>
+            </SparklesText>
           </Link>
         </HoverCard>
 
