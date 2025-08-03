@@ -16,7 +16,10 @@ const focusAreas = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20">
+    <section
+      id="about"
+      className="relative z-10 py-24 bg-background" // fixed: z-10 and top padding
+    >
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <FadeIn direction="left">
@@ -27,7 +30,7 @@ export function AboutSection() {
                   alt="About Ali Raza"
                   width={500}
                   height={600}
-                  className="relative rounded-2xl shadow-2xl"
+                  className="relative rounded-2xl shadow-2xl object-cover"
                 />
               </AnimatedGradient>
             </HoverCard>
@@ -41,24 +44,19 @@ export function AboutSection() {
                 </h2>
               </FadeIn>
             </StaggerItem>
+
             <StaggerItem>
               <FadeIn direction="right" delay={0.2}>
                 <div className="space-y-4 text-lg text-muted-foreground">
                   <p>
                     Hello! I'm Ali Raza, a dedicated Full Stack Developer with a passion for creating 
-                    dynamic, user-centric web applications. My journey into programming started with 
-                    fascination for how things work, which quickly evolved into a career where I can 
-                    build, innovate, and solve complex problems.
+                    dynamic, user-centric web applications...
                   </p>
                   <p>
-                    With a strong foundation in both front-end and back-end technologies, I specialize 
-                    in building seamless digital experiences. My expertise lies in the MERN stack, 
-                    particularly with Next.js for server-rendered applications.
+                    With a strong foundation in both front-end and back-end technologies...
                   </p>
                   <p>
-                    When I'm not coding, you can find me exploring new tech trends, contributing to 
-                    open-source projects, or enjoying a good cup of coffee. I believe in lifelong 
-                    learning and continuously strive to expand my skillset.
+                    When I'm not coding, you can find me exploring new tech trends...
                   </p>
                 </div>
               </FadeIn>

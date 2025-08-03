@@ -26,15 +26,16 @@ export function HeroSection() {
   return (
     <NoSSR>
       <SplashCursor>
-        <section id="home" className="relative z-20 min-h-screen flex items-center justify-center overflow-hidden">
-
-          {/* Optional: Add background layer if needed */}
+        <section
+          id="home"
+          className="relative z-20 min-h-screen overflow-hidden bg-background pt-28 pb-16"
+        >
           <AnimatedGradient className="absolute inset-0 z-0">
             <div className="absolute top-20 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
             <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
           </AnimatedGradient>
 
-          <div className="container mx-auto px-4 py-16 relative z-10">
+          <div className="container mx-auto px-4 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <StaggerContainer className="text-center lg:text-left space-y-8">
                 <StaggerItem>
