@@ -26,9 +26,10 @@ export function HeroSection() {
   return (
     <NoSSR>
       <SplashCursor>
-        <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <section id="home" className="relative z-20 min-h-screen flex items-center justify-center overflow-hidden">
 
-          <AnimatedGradient className="absolute inset-0">
+          {/* Optional: Add background layer if needed */}
+          <AnimatedGradient className="absolute inset-0 z-0">
             <div className="absolute top-20 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
             <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
           </AnimatedGradient>
@@ -117,8 +118,8 @@ export function HeroSection() {
                 <FloatingElement duration={4} yOffset={15}>
                   <HoverCard hoverScale={1.05}>
                     <div className="relative">
-                      <AnimatedGradient gradientClassName="bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-2xl" >
-                        <div className="relative w-80 h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-gradient-to-r from-primary to-accent shadow-2xl">
+                      <AnimatedGradient gradientClassName="bg-gradient-to-r from-primary/20 to-accent/20 rounded-full blur-2xl">
+                        <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-gradient-to-r from-primary to-accent shadow-2xl">
                           <Image
                             src="/images/AliRaza.png"
                             alt="Ali Raza"
