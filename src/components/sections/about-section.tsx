@@ -26,7 +26,7 @@ export function AboutSection() {
             <HoverCard hoverScale={1.02}>
               <AnimatedGradient className="relative">
                 <Image
-                  src="/images/about.png"
+                  src="/images/myimage.jpg"
                   alt="About Ali Raza"
                   width={500}
                   height={600}
