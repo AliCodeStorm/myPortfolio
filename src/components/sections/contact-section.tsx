@@ -16,7 +16,7 @@ import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "ali.raza@example.com", href: "mailto:ali.raza@example.com" },
+  { icon: Mail, label: "Email", value: "wolfhunting49@gmail.com", href: "mailto:wolfhunting49@gmail.com" },
   { icon: Phone, label: "Phone", value: "+92 302 9428 0084", href: "tel:+923029428084" },
   { icon: MapPin, label: "Location", value: "Pakistan", href: "#" },
 ];
