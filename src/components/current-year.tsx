@@ -8,6 +8,5 @@ export function CurrentYear() {
   useEffect(() => {
     setYear(new Date().getFullYear());
   }, []);
-
   return <>{year}</>;
 }
